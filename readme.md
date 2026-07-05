@@ -1,3 +1,4 @@
+```markdown
 # Telco Customer Churn Prediction: End-to-End MLOps Pipeline
 
 [![CI/CD Pipeline](https://github.com/trantrongkhangttns/telco-churn-mlops/actions/workflows/ci.yml/badge.svg)](https://github.com/trantrongkhangttns/telco-churn-mlops/actions)
@@ -10,7 +11,6 @@ Customer retention is one of the most critical metrics for telecommunication com
 This project implements an End-to-End Machine Learning system to predict customer churn. By identifying at-risk customers proactively based on their demographic data, account information, and usage patterns, the business can deploy targeted retention strategies, thereby reducing revenue leakage.
 
 ## 🏗 System Architecture
-The project is built with a strong emphasis on MLOps principles, ensuring the model is not just a Jupyter Notebook, but a fully deployable software artifact:
 1. **Model Training:** Data preprocessing and training an **XGBoost** classifier. Model serialization is optimized using `skops` for fast, secure loading.
 2. **Serving Layer:** A high-performance REST API built with **FastAPI**.
 3. **Interactive UI:** A web interface built with **Gradio** for real-time inference and demonstration.
@@ -27,8 +27,7 @@ The project is built with a strong emphasis on MLOps principles, ensuring the mo
 
 ## 🚀 How to Run
 
-### Method 1: Run via Docker (Recommended & Fastest)
-You don't need to install Python or any dependencies. As long as you have Docker installed, simply run:
+### Method 1: Run via Docker 
 
 ```bash
 docker run -p 8000:8000 khangtranttns/telco-churn-api:latest
@@ -56,7 +55,7 @@ cd telco-churn-mlops
 
 ```bash
 python -m venv .venv
-source .venv/Scripts/activate  # On Windows
+.\.venv\Scripts\activate  # On Windows
 pip install -r requirements.txt
 
 ```
@@ -65,6 +64,17 @@ pip install -r requirements.txt
 
 ```bash
 uvicorn src.app.app:app --host 0.0.0.0 --port 8000
+
+```
+
+---
+
+## 🧪 Testing (Automated)
+
+To ensure the API and UI endpoints are functioning correctly, run the integration tests using `pytest`:
+
+```bash
+python -m pytest tests/ -W ignore
 
 ```
 
@@ -125,3 +135,4 @@ The API exposes a `/predict` endpoint that accepts POST requests. Data validatio
 
 ---
 
+```
