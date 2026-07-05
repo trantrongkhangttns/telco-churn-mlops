@@ -20,3 +20,5 @@ lightgbm
 optuna
 uvicorn
 gradio
+pytest
+httpx
