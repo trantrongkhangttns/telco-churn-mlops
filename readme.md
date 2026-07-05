@@ -1,4 +1,3 @@
-```markdown
 # Telco Customer Churn Prediction: End-to-End MLOps Pipeline
 
 [![CI/CD Pipeline](https://github.com/trantrongkhangttns/telco-churn-mlops/actions/workflows/ci.yml/badge.svg)](https://github.com/trantrongkhangttns/telco-churn-mlops/actions)
